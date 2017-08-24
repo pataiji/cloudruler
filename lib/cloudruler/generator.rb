@@ -13,7 +13,9 @@ module Cloudruler
     end
 
     def bundle
-      run 'bundle install'
+      inside destination_root do
+        run "bundle install"
+      end
     end
   end
 end
