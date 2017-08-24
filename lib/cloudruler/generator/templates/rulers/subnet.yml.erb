@@ -1,0 +1,13 @@
+# subnet: Subnet
+---
+Resources:
+  Subnet:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref <%= @vpc %>
+      AvailabilityZone: <%= @availability_zone %>
+      CidrBlock: <%= @cidr %>
+      MapPublicIpOnLaunch: true
+      Tags:
+        - Key: Name
+          Value: <%= @tag %>

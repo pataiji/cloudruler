@@ -1,0 +1,12 @@
+# vpc: VPC
+---
+Resources:
+  VPC:
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: <%= @cidr %>
+      EnableDnsSupport: true
+      EnableDnsHostnames: true
+      Tags:
+        - Key: Name
+          Value: <%= @tag %>

@@ -1,41 +1,39 @@
 # Cloudruler
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/cloudruler`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Cloudruler is a management tool for AWS CloudFormation inspired by Itamae.
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'cloudruler'
+```bash
+$ gem install cloudruler
 ```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install cloudruler
 
 ## Usage
 
-TODO: Write usage instructions here
+Create new cloudruler project
 
-## Development
+```bash
+$ cloudruler init sample_project
+```
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+And then execute
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+```
+$ cloudruler dump templates/sample.rb
+```
+
+```bash
+$ cloudruler help
+Commands:
+  cloudruler dump TEMPLATE_FILE  # Dump resolved template
+  cloudruler help [COMMAND]      # Describe available commands or one specific command
+  cloudruler init NAME           # Create a new cloudruler project
+```
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/cloudruler.
-
+Bug reports and pull requests are welcome on GitHub at https://github.com/pataiji/cloudruler.
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-

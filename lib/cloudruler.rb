@@ -1,5 +1,8 @@
 require 'cloudruler/version'
+require 'cloudruler/generator'
+require 'cloudruler/runner'
+
+require 'pry-byebug'
 
 module Cloudruler
-  # Your code goes here...
 end

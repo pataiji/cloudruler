@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+$: << File.expand_path('../../lib', __FILE__)
+
+require 'thor'
+require 'cloudruler'
+
+module Cloudruler
+  class CLI < Thor
+    desc 'init NAME', 'Create a new cloudruler project'
+    def init(name)
+      generator = Generator.new([], {}, destination_root: name)
+      generator.invoke_all
+    end
+
+    desc 'dump TEMPLATE_FILE', 'Output resolved template'
+    def dump(template_file)
+      puts Runner.dump(template_file)
+    end
+  end
+end
+
+Cloudruler::CLI.start
